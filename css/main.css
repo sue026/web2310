@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap&family=Noto+Sans+KR:wght@300;500;700&family=Noto+Sans:wght@400;700&family=Open+Sans:wght@300;400;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Kanit', sans-serif;*/
+
+/*common*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;
+	line-height: 1em;
+}
+article, aside, details, figcaption, figure,
+footer, header, main, menu, nav, section {display: block;}
+ol, ul, li {list-style: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+a {color:inherit;text-decoration: none;}
+button {background: none;border: none;line-height: 1;font:inherit;margin: 0;padding: 0;cursor:pointer;outline:none}
+
+body {font-size: 16px;font-family: 'Open Sans','Noto Sans','Noto Sans KR', sans-serif;background: #222;color: #FFF}
+
+.container {width: 90%;margin: auto;}
+.container:after {content:"";display: block;clear: both;}
+.active {color: #bac964 !important;font-weight: 500;}
+
+
+
+/*GNB*/
+.site_nav {position: fixed;z-index: 100;left: 100%;}
+.gnb_open {width: 20px;position: fixed;right: 15px;top: 12px;}
+.gnb_open span {display: block;height: 3px;margin-bottom: 3px;background: #FFF;}
+
+.popup_gnb {}
+
+.fixed_gnb {background: #FFF;font-size: 14px;text-transform: uppercase;border-bottom: 1px solid #bac964;padding: 15px 0;left: 0;width: 100%;top: 0;color: #222}
+.fixed_gnb ul {display: flex;flex-direction: row;justify-content: center;}
+.fixed_gnb li {padding: 0 20px;cursor:pointer}
+
+/*HOME*/
+#home {background: url(../img/hero_1.jpg) no-repeat center;background-size:cover;position: relative;height: 100vh;min-height:700px}
+#home:before {content:"";position:absolute;left: 0;right: 0;top: 0;bottom: 0;background: rgba(0,0,0,0.5);}
+#home h1 {position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);display: flex;flex-direction: column;justify-content: center;align-items: center;text-align: center;}
+
+#home h1 strong {margin-bottom: 20px;font-size: 50px;font-weight: 600;line-height: 1.2;}
+#home h1 span {font-size: 30px;margin-bottom: 50px;}
+#home button {color: #FFF; background: #bac964;padding: 16px 32px;border-radius: 25px;}
+#home .scroll_icon {position: absolute;left: 0;right: 0;bottom: 50px;text-align: center;animation: mouse 1s infinite}
+#home .scroll_icon img {width: 60px;}
+#home .scroll_icon span {display: block;font-size: 14px;}
+
+@keyframes mouse {
+	0%, 100% {transform: translateY(0)}
+	50% {transform: translateY(-10%)}
+}
+
+
+/*section.page*/
+section.page {min-height: 100vh;display: flex;justify-content: center;align-items: center;}
+.page h2 {text-align: center;font-weight: 700;font-size: 30px;font-family: 'Kanit', sans-serif;margin-bottom: 100px}
+
+
+/*Portfolio*/
+#portfolio .filter_menu {display: flex;flex-direction:row;justify-content: center;padding:0 0 60px 0;font-size: 14px;color: #999}
+#portfolio .filter_menu li {margin: 0 20px;cursor:pointer;}
+#portfolio .filter_menu li:hover {color: #bac964}
+#portfolio .filter_contents ul {}
+#portfolio .filter_contents li {width: calc(33.333333% - 28px);float: left;margin: 0 14px 55px 14px;}
+#portfolio .filter_contents li img {width: 100%;}
+#portfolio .filter_contents li span {display: block;text-align: center;margin-top: 12px;font-size: 14px;}
+#portfolio .filter_contents li .p_tit {font-weight: 400;font-size: 18px;}
+
+
+/*Student*/
+#student ul {width: 80%;margin: auto;display: flex;gap: 80px;flex-wrap: wrap;justify-content: center;}
+#student li {width: calc(100% / 6 - 80px);}
+#student li img {width: 100%;}
+#student li span {display: block;text-align: center;font-size: 30px;margin-top: 20px;}
+
